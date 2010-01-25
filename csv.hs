@@ -13,9 +13,8 @@ quotedCell =
        char '"' <?> "quote at end of cell"
        return content
 
-quotedChar =
-        noneOf "\""
-    <|> try (string "\"\"" >> return '"')
+quotedChar  =  noneOf "\""
+           <|> try (string "\"\"" >> return '"')
 
 eol  =  try (string "\n\r")
     <|> try (string "\r\n")
