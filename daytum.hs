@@ -1,3 +1,4 @@
+{-# LANGUAGE ScopedTypeVariables #-}
 module Main
 where
 
@@ -12,15 +13,27 @@ main = do
     Left err -> print err
     Right xs -> print $ fromList $ xs !! 1
 
-data DaytumRecord = Daytum String String Double [String]
+type Activity = String
+data DaytumRecord = Daytum String String Double [Activity]
                     deriving Show
 
 -- | Creates a DaytumRecord from list of strings
-fromList :: [String] -> DaytumRecord
-fromList xs = Daytum name date value acts
+fromList :: [String] -> [DaytumRecord]
+fromList [ns :: String, ds :: String , vs :: String , as :: String] = 
+  [Daytum name date value acts]
   where
-    [ns, ds, vs, as] = xs
-    name = ns
-    date = ds
-    value = (read vs)::Double
-    acts = [as]
+    name   = ns
+    date   = ds
+    value  = (read vs)::Double
+    acts   = activitiesFromList as
+fromList _ = []
+
+activitiesFromList :: String -> [Activity]
+activitiesFromList xs = afl xs []
+  where
+    afl :: String -> String -> [String]
+    afl [] w = [w]
+    afl xs w = case xs of 
+      ' ':xs -> afl xs w
+      ';':xs -> w:(afl xs [])
+      x:xs   -> afl xs (w++[x])
