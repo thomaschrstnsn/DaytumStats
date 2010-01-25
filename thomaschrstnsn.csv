@@ -1,0 +1,213 @@
+name,date,amount,categories
+Running,Mon Jan 25 17:05:18 UTC 2010,8.0,running; Activity
+BREAST STROKE,Sun Jan 24 13:13:30 UTC 2010,1.5,SWIMMING (KM); Activity
+spinning,Thu Jan 21 20:50:45 UTC 2010,1.0,Activity; gym visits
+Running,Wed Jan 20 17:06:44 UTC 2010,8.0,running; Activity
+spinning,Tue Jan 19 17:54:31 UTC 2010,1.0,Activity; gym visits
+fitness,Mon Jan 18 17:11:00 UTC 2010,1.0,gym visits; Activity
+spinning,Thu Jan 14 17:17:00 UTC 2010,1.0,Activity; gym visits
+spinning,Tue Jan 12 18:19:41 UTC 2010,1.0,Activity; gym visits
+Running,Mon Jan 11 16:55:04 UTC 2010,8.0,running; Activity
+fitness,Sat Jan 09 16:08:10 UTC 2010,1.0,gym visits; Activity
+spinning,Thu Jan 07 18:00:10 UTC 2010,1.0,Activity; gym visits
+Running,Wed Jan 06 17:52:20 UTC 2010,8.0,running; Activity
+spinning,Tue Jan 05 17:13:00 UTC 2010,1.0,Activity; gym visits
+Running,Sun Jan 03 16:23:56 UTC 2010,8.0,running; Activity
+Running,Sun Dec 27 15:01:40 UTC 2009,5.0,running; Activity
+Running,Sat Dec 26 13:51:26 UTC 2009,6.0,running; Activity
+Running,Tue Dec 22 15:41:36 UTC 2009,5.0,running; Activity
+fitness,Mon Dec 21 15:42:00 UTC 2009,1.0,gym visits; Activity
+spinning,Tue Dec 15 19:01:46 UTC 2009,1.0,Activity; gym visits
+Running,Mon Dec 14 17:28:59 UTC 2009,8.0,running; Activity
+Running,Tue Dec 08 17:03:18 UTC 2009,8.0,running; Activity
+Running,Mon Dec 07 17:04:57 UTC 2009,8.0,running; Activity
+spinning,Thu Dec 03 17:57:52 UTC 2009,1.0,Activity; gym visits
+spinning,Tue Dec 01 18:55:32 UTC 2009,1.0,Activity; gym visits
+spinning,Sat Nov 28 15:42:40 UTC 2009,1.0,Activity; gym visits
+spinning,Tue Nov 24 18:34:30 UTC 2009,1.0,Activity; gym visits
+Running,Sun Nov 22 13:21:34 UTC 2009,10.0,running; Activity
+Running,Fri Nov 20 16:53:02 UTC 2009,7.75,running; Activity
+spinning,Thu Nov 19 18:38:57 UTC 2009,1.0,Activity; gym visits
+spinning,Tue Nov 17 17:36:00 UTC 2009,1.0,Activity; gym visits
+Running,Sun Nov 15 16:15:43 UTC 2009,7.5,running; Activity
+spinning,Thu Nov 12 17:44:28 UTC 2009,1.0,Activity; gym visits
+body pump,Sun Nov 08 12:33:00 UTC 2009,1.0,Activity
+Running,Fri Nov 06 16:52:32 UTC 2009,7.5,running; Activity
+spinning,Thu Nov 05 17:30:00 UTC 2009,1.0,Activity; gym visits
+spinning,Tue Nov 03 17:51:14 UTC 2009,1.0,Activity; gym visits
+spinning,Thu Oct 29 18:35:03 UTC 2009,1.0,Activity; gym visits
+kickboxing,Wed Oct 28 17:12:14 UTC 2009,1.0,Activity
+spinning,Tue Oct 27 17:39:00 UTC 2009,1.0,Activity; gym visits
+Running,Thu Oct 22 16:22:35 UTC 2009,7.5,running; Activity
+BREAST STROKE,Sat Oct 17 14:43:05 UTC 2009,1.5,SWIMMING (KM); Activity
+spinning,Thu Oct 15 18:08:42 UTC 2009,1.0,Activity; gym visits
+cardio,Wed Oct 14 19:43:24 UTC 2009,1.0,Activity; gym visits
+spinning,Tue Oct 13 17:50:08 UTC 2009,1.0,Activity; gym visits
+Running,Mon Oct 12 15:52:33 UTC 2009,7.5,running; Activity
+Running,Sat Oct 10 12:31:39 UTC 2009,6.0,running; Activity
+fitness,Sat Oct 10 08:09:14 UTC 2009,1.0,gym visits; Activity
+Running,Wed Oct 07 18:40:12 UTC 2009,7.5,running; Activity
+spinning,Tue Oct 06 17:47:39 UTC 2009,1.0,Activity; gym visits
+Running,Mon Oct 05 17:47:00 UTC 2009,7.0,running; Activity
+fitness,Sat Oct 03 12:58:14 UTC 2009,1.0,gym visits; Activity
+Running,Fri Oct 02 16:36:26 UTC 2009,7.5,running; Activity
+Running,Wed Sep 30 17:00:40 UTC 2009,7.5,running; Activity
+spinning,Tue Sep 29 17:45:13 UTC 2009,1.0,Activity; gym visits
+Running,Sat Sep 26 17:54:29 UTC 2009,7.5,running; Activity
+spinning,Thu Sep 24 17:43:16 UTC 2009,1.0,Activity; gym visits
+Running,Wed Sep 23 17:35:13 UTC 2009,7.5,running; Activity
+fitness,Mon Sep 21 17:06:13 UTC 2009,1.0,gym visits; Activity
+spinning,Thu Sep 17 20:38:56 UTC 2009,1.0,Activity; gym visits
+Running,Wed Sep 16 17:41:59 UTC 2009,7.5,running; Activity
+spinning,Tue Sep 15 18:05:04 UTC 2009,1.0,Activity; gym visits
+fitness,Mon Sep 14 16:16:01 UTC 2009,1.0,gym visits; Activity
+Running,Fri Sep 11 17:06:09 UTC 2009,7.5,running; Activity
+fitness,Wed Sep 09 17:26:16 UTC 2009,1.0,gym visits; Activity
+Running,Mon Sep 07 19:05:16 UTC 2009,6.5,running; Activity
+Running,Sat Sep 05 07:34:52 UTC 2009,7.0,running; Activity
+fitness,Tue Sep 01 18:02:00 UTC 2009,1.0,gym visits; Activity
+fitness,Wed Aug 26 20:04:25 UTC 2009,1.0,gym visits; Activity
+Running,Tue Aug 25 16:19:57 UTC 2009,5.0,running; Activity
+Running,Thu Aug 20 17:59:00 UTC 2009,5.0,running; Activity
+Running,Tue Aug 18 21:04:26 UTC 2009,5.0,running; Activity
+Running,Sun Aug 16 11:06:00 UTC 2009,6.0,running; Activity
+Running,Fri Aug 14 09:06:00 UTC 2009,5.0,running; Activity
+Running,Tue Aug 11 17:31:32 UTC 2009,5.0,running; Activity
+fitness,Tue Aug 11 13:39:55 UTC 2009,1.0,gym visits; Activity
+BREAST STROKE,Sun Aug 09 15:11:47 UTC 2009,2.0,SWIMMING (KM); Activity
+fitness,Thu Aug 06 16:31:28 UTC 2009,1.0,gym visits; Activity
+Running,Wed Aug 05 18:16:00 UTC 2009,7.5,running; Activity
+fitness,Tue Aug 04 16:42:00 UTC 2009,1.0,gym visits; Activity
+BREAST STROKE,Mon Aug 03 16:15:41 UTC 2009,1.5,SWIMMING (KM); Activity
+Running,Sun Aug 02 08:00:00 UTC 2009,7.5,running; Activity
+cardio,Fri Jul 31 16:08:16 UTC 2009,1.0,Activity; gym visits
+Running,Thu Jul 30 15:03:31 UTC 2009,7.5,running; Activity
+Running,Tue Jul 28 06:36:01 UTC 2009,5.7,running; Activity
+fitness,Mon Jul 27 16:00:00 UTC 2009,1.0,gym visits; Activity
+Running,Sun Jul 26 16:10:58 UTC 2009,7.5,running; Activity
+Running,Sat Jul 25 16:00:00 UTC 2009,7.5,running; Activity
+Running,Wed Jul 22 15:22:09 UTC 2009,7.5,running; Activity
+fitness,Tue Jul 21 17:44:42 UTC 2009,1.0,gym visits; Activity
+breast swimming,Tue Jul 21 06:00:00 UTC 2009,1.5,Activity; SWIMMING (KM)
+Running,Mon Jul 20 17:02:28 UTC 2009,7.5,running; Activity
+fitness,Sun Jul 19 17:02:00 UTC 2009,0.5,gym visits; Activity
+Running,Sat Jul 18 07:31:21 UTC 2009,5.24,running; Activity
+Running,Wed Jul 15 16:46:28 UTC 2009,7.5,running; Activity
+fitness,Mon Jul 13 16:58:06 UTC 2009,1.0,gym visits; Activity
+BREAST STROKE,Sun Jul 12 14:54:17 UTC 2009,2.0,SWIMMING (KM); Activity
+fitness,Sat Jul 11 16:00:00 UTC 2009,1.0,gym visits; Activity
+BREAST STROKE,Fri Jul 10 09:45:00 UTC 2009,2.0,SWIMMING (KM); Activity
+Running,Fri Jul 10 07:43:06 UTC 2009,5.7,running; Activity
+fitness,Thu Jul 09 17:42:00 UTC 2009,1.0,gym visits; Activity
+Running,Tue Jul 07 08:04:00 UTC 2009,5.7,running; Activity
+fitness,Mon Jul 06 18:20:37 UTC 2009,1.0,gym visits; Activity
+Running,Tue Jun 30 15:18:00 UTC 2009,5.7,running; Activity
+BREAST STROKE,Tue Jun 30 11:17:48 UTC 2009,2.0,SWIMMING (KM); Activity
+CROSS TRAINER,Sun Jun 28 13:53:38 UTC 2009,139.0,FITNESS CALORIES; Activity
+Running,Sat Jun 27 12:47:00 UTC 2009,5.7,running; Activity
+BREAST STROKE,Sat Jun 27 01:02:00 UTC 2009,2.0,SWIMMING (KM); Activity
+BREAST STROKE,Thu Jun 25 21:35:00 UTC 2009,2.0,SWIMMING (KM); Activity
+Running,Thu Jun 25 11:17:00 UTC 2009,3.5,running; Activity
+CROSS TRAINER,Tue Jun 23 20:11:17 UTC 2009,270.0,FITNESS CALORIES; Activity
+BREAST STROKE,Mon Jun 22 20:53:52 UTC 2009,1.75,SWIMMING (KM); Activity
+BREAST STROKE,Sun Jun 21 11:46:27 UTC 2009,2.25,SWIMMING (KM); Activity
+BREAST STROKE,Wed Jun 17 17:26:18 UTC 2009,1.5,SWIMMING (KM); Activity
+CROSS TRAINER,Tue Jun 16 22:03:45 UTC 2009,140.0,FITNESS CALORIES; Activity
+BREAST STROKE,Mon Jun 15 16:44:14 UTC 2009,2.0,SWIMMING (KM); Activity
+CROSS TRAINER,Sun Jun 14 16:32:29 UTC 2009,140.0,FITNESS CALORIES; Activity
+BREAST STROKE,Sat Jun 13 18:32:00 UTC 2009,0.75,SWIMMING (KM); Activity
+CROSS TRAINER,Thu Jun 11 16:07:14 UTC 2009,395.0,FITNESS CALORIES; Activity
+CROSS TRAINER,Sun Jun 07 22:27:00 UTC 2009,537.0,FITNESS CALORIES; Activity
+BREAST STROKE,Sun Jun 07 21:35:00 UTC 2009,2.0,SWIMMING (KM); Activity
+BREAST STROKE,Sat Jun 06 23:28:00 UTC 2009,2.0,SWIMMING (KM); Activity
+CROSS TRAINER,Fri Jun 05 23:27:00 UTC 2009,405.0,FITNESS CALORIES; Activity
+BREAST STROKE,Thu Jun 04 23:28:00 UTC 2009,2.0,SWIMMING (KM); Activity
+CROSS TRAINER,Wed Jun 03 17:41:26 UTC 2009,387.0,FITNESS CALORIES; Activity
+BREAST STROKE,Tue Jun 02 21:33:00 UTC 2009,2.0,SWIMMING (KM); Activity
+BREAST STROKE,Sat May 30 08:47:54 UTC 2009,2.0,SWIMMING (KM); Activity
+CROSS TRAINER,Thu May 28 16:56:05 UTC 2009,415.0,FITNESS CALORIES; Activity
+BREAST STROKE,Wed May 27 21:59:24 UTC 2009,1.5,SWIMMING (KM); Activity
+CROSS TRAINER,Tue May 26 19:13:37 UTC 2009,509.0,FITNESS CALORIES; Activity
+CROSS TRAINER,Sun May 24 12:27:56 UTC 2009,495.0,FITNESS CALORIES; Activity
+CROSS TRAINER,Sat May 23 08:52:52 UTC 2009,405.0,FITNESS CALORIES; Activity
+CROSS TRAINER,Wed May 20 15:11:27 UTC 2009,402.0,FITNESS CALORIES; Activity
+BREAST STROKE,Tue May 19 18:06:07 UTC 2009,2.0,SWIMMING (KM); Activity
+CROSS TRAINER,Tue May 19 00:05:00 UTC 2009,397.0,FITNESS CALORIES; Activity
+BREAST STROKE,Thu May 14 22:16:00 UTC 2009,2.0,SWIMMING (KM); Activity
+CROSS TRAINER,Wed May 13 22:15:00 UTC 2009,405.0,FITNESS CALORIES; Activity
+BREAST STROKE,Tue May 12 22:45:00 UTC 2009,1.5,SWIMMING (KM); Activity
+CROSS TRAINER,Mon May 11 16:48:31 UTC 2009,338.0,FITNESS CALORIES; Activity
+BREAST STROKE,Sun May 10 14:38:27 UTC 2009,2.0,SWIMMING (KM); Activity
+CROSS TRAINER,Thu May 07 20:30:00 UTC 2009,485.0,FITNESS CALORIES; Activity
+BREAST STROKE,Wed May 06 17:44:58 UTC 2009,2.0,SWIMMING (KM); Activity
+CROSS TRAINER,Tue May 05 17:46:46 UTC 2009,320.0,FITNESS CALORIES; Activity
+BREAST STROKE,Sun May 03 18:07:00 UTC 2009,2.0,SWIMMING (KM); Activity
+BIKE,Thu Apr 30 15:39:30 UTC 2009,207.0,FITNESS CALORIES
+CROSS TRAINER,Thu Apr 30 15:39:27 UTC 2009,320.0,FITNESS CALORIES; Activity
+BREAST STROKE,Tue Apr 28 23:50:00 UTC 2009,1.5,SWIMMING (KM); Activity
+BIKE,Mon Apr 27 23:49:00 UTC 2009,320.0,FITNESS CALORIES
+CROSS TRAINER,Mon Apr 27 23:48:00 UTC 2009,350.0,FITNESS CALORIES; Activity
+BREAST STROKE,Sun Apr 26 11:08:04 UTC 2009,1.5,SWIMMING (KM); Activity
+CROSS TRAINER,Sat Apr 25 19:34:00 UTC 2009,349.0,FITNESS CALORIES; Activity
+BIKE,Sat Apr 25 19:34:00 UTC 2009,300.0,FITNESS CALORIES
+BREAST STROKE,Thu Apr 23 22:41:00 UTC 2009,2.0,SWIMMING (KM); Activity
+BIKE,Wed Apr 22 23:45:00 UTC 2009,309.0,FITNESS CALORIES
+CROSS TRAINER,Wed Apr 22 23:45:00 UTC 2009,374.0,FITNESS CALORIES; Activity
+BREAST STROKE,Mon Apr 20 16:20:31 UTC 2009,1.5,SWIMMING (KM); Activity
+BIKE,Mon Apr 06 23:24:00 UTC 2009,213.0,FITNESS CALORIES
+CROSS TRAINER,Mon Apr 06 23:24:00 UTC 2009,374.0,FITNESS CALORIES; Activity
+BREAST STROKE,Thu Apr 02 17:59:41 UTC 2009,2.0,SWIMMING (KM); Activity
+CROSS TRAINER,Tue Mar 31 01:29:00 UTC 2009,394.0,FITNESS CALORIES; Activity
+BIKE,Tue Mar 31 01:29:00 UTC 2009,165.0,FITNESS CALORIES
+BREAST STROKE,Sun Mar 29 17:15:00 UTC 2009,2.0,SWIMMING (KM); Activity
+CROSS TRAINER,Sat Mar 28 00:16:00 UTC 2009,382.0,FITNESS CALORIES; Activity
+BIKE,Sat Mar 28 00:16:00 UTC 2009,180.0,FITNESS CALORIES
+BREAST STROKE,Tue Mar 24 19:15:22 UTC 2009,2.0,SWIMMING (KM); Activity
+CROSS TRAINER,Sun Mar 22 17:33:00 UTC 2009,384.0,FITNESS CALORIES; Activity
+BIKE,Sun Mar 22 17:33:00 UTC 2009,324.0,FITNESS CALORIES
+BREAST STROKE,Sat Mar 21 12:42:56 UTC 2009,2.0,SWIMMING (KM); Activity
+BIKE,Mon Mar 16 20:13:17 UTC 2009,345.0,FITNESS CALORIES
+CROSS TRAINER,Mon Mar 16 20:13:10 UTC 2009,395.0,FITNESS CALORIES; Activity
+BREAST STROKE,Sun Mar 15 17:40:00 UTC 2009,2.0,SWIMMING (KM); Activity
+BIKE,Sat Mar 14 13:18:15 UTC 2009,201.0,FITNESS CALORIES
+CROSS TRAINER,Sat Mar 14 13:18:12 UTC 2009,362.0,FITNESS CALORIES; Activity
+BREAST STROKE,Sun Mar 08 17:06:00 UTC 2009,2.0,SWIMMING (KM); Activity
+CROSS TRAINER,Sat Mar 07 18:31:00 UTC 2009,392.0,FITNESS CALORIES; Activity
+BREAST STROKE,Thu Mar 05 19:12:41 UTC 2009,2.0,SWIMMING (KM); Activity
+BREAST STROKE,Fri Feb 27 11:23:43 UTC 2009,2.0,SWIMMING (KM); Activity
+BIKE,Thu Feb 26 18:05:00 UTC 2009,320.0,FITNESS CALORIES
+CROSS TRAINER,Thu Feb 26 18:05:00 UTC 2009,382.0,FITNESS CALORIES; Activity
+BREAST STROKE,Wed Feb 25 19:03:00 UTC 2009,2.0,SWIMMING (KM); Activity
+BIKE,Tue Feb 24 11:56:18 UTC 2009,318.0,FITNESS CALORIES
+CROSS TRAINER,Tue Feb 24 11:56:06 UTC 2009,394.0,FITNESS CALORIES; Activity
+BREAST STROKE,Mon Feb 23 18:01:00 UTC 2009,2.0,SWIMMING (KM); Activity
+BIKE,Sun Feb 22 13:55:00 UTC 2009,310.0,FITNESS CALORIES
+CROSS TRAINER,Sun Feb 22 13:54:54 UTC 2009,384.0,FITNESS CALORIES; Activity
+BREAST STROKE,Fri Feb 20 12:59:12 UTC 2009,2.0,SWIMMING (KM); Activity
+BIKE,Thu Feb 19 12:38:05 UTC 2009,310.0,FITNESS CALORIES
+CROSS TRAINER,Thu Feb 19 12:37:58 UTC 2009,381.0,FITNESS CALORIES; Activity
+BREAST STROKE,Wed Feb 18 12:39:45 UTC 2009,2.0,SWIMMING (KM); Activity
+CROSS TRAINER,Tue Feb 17 12:26:28 UTC 2009,380.0,FITNESS CALORIES; Activity
+BIKE,Tue Feb 17 12:26:18 UTC 2009,318.0,FITNESS CALORIES
+BREAST STROKE,Mon Feb 16 09:39:12 UTC 2009,2.0,SWIMMING (KM); Activity
+BIKE,Fri Feb 13 10:12:32 UTC 2009,205.0,FITNESS CALORIES
+CROSS TRAINER,Fri Feb 13 10:12:25 UTC 2009,377.0,FITNESS CALORIES; Activity
+BREAST STROKE,Thu Feb 12 11:22:50 UTC 2009,2.0,SWIMMING (KM); Activity
+BIKE,Wed Feb 11 15:10:43 UTC 2009,320.0,FITNESS CALORIES
+CROSS TRAINER,Wed Feb 11 15:10:33 UTC 2009,376.0,FITNESS CALORIES; Activity
+BREAST STROKE,Tue Feb 10 21:06:00 UTC 2009,2.0,SWIMMING (KM); Activity
+BREAST STROKE,Sun Feb 08 21:06:00 UTC 2009,2.0,SWIMMING (KM); Activity
+BREAST STROKE,Thu Feb 05 14:58:00 UTC 2009,2.0,SWIMMING (KM); Activity
+BREAST STROKE,Tue Feb 03 14:58:00 UTC 2009,2.0,SWIMMING (KM); Activity
+BREAST STROKE,Sun Feb 01 14:58:00 UTC 2009,2.5,SWIMMING (KM); Activity
+BREAST STROKE,Thu Jan 29 14:58:00 UTC 2009,2.0,SWIMMING (KM); Activity
+BREAST STROKE,Tue Jan 27 14:58:00 UTC 2009,2.0,SWIMMING (KM); Activity
+BREAST STROKE,Sun Jan 25 14:58:00 UTC 2009,2.0,SWIMMING (KM); Activity
+BREAST STROKE,Tue Jan 20 14:58:00 UTC 2009,1.5,SWIMMING (KM); Activity
+BREAST STROKE,Fri Jan 16 14:58:00 UTC 2009,1.5,SWIMMING (KM); Activity
+BREAST STROKE,Mon Jan 12 14:58:00 UTC 2009,1.5,SWIMMING (KM); Activity
+BREAST STROKE,Sat Jan 10 14:58:00 UTC 2009,1.5,SWIMMING (KM); Activity
+BREAST STROKE,Thu Jan 08 14:58:00 UTC 2009,1.5,SWIMMING (KM); Activity
+BREAST STROKE,Tue Jan 06 21:02:00 UTC 2009,1.5,SWIMMING (KM); Activity
+BREAST STROKE,Sun Jan 04 21:02:00 UTC 2009,1.5,SWIMMING (KM); Activity
+BREAST STROKE,Fri Jan 02 21:02:00 UTC 2009,1.5,SWIMMING (KM); Activity
