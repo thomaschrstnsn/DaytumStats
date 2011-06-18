@@ -2,31 +2,33 @@
 module Main
 where
 
-import CSV (parseCSV)
 import System.Environment (getArgs)
+
+import Safe
+import CSV (parseCSV)
 
 main = do
   ~[fname] <- getArgs
   putStrLn $ "parsing: " ++ show fname
   res <- parseCSV fname
-  case res of 
+  case res of
     Left err -> print err
-    Right xs -> print $ fromList $ xs !! 1
+    Right xs -> print $ map fromList $ drop 1 xs
 
 type Activity = String
-data DaytumRecord = Daytum String String Double [Activity]
-                    deriving Show
+data DaytumRecord = Daytum { name       :: String
+                           , date       :: String
+                           , amount     :: Double
+                           , activities :: [Activity]
+                           } deriving Show
 
 -- | Creates a DaytumRecord from list of strings
-fromList :: [String] -> [DaytumRecord]
-fromList [ns :: String, ds :: String , vs :: String , as :: String] = 
-  [Daytum name date value acts]
+fromList :: [String] -> DaytumRecord
+fromList [ns, ds, vs, as] = Daytum {name=ns, date=ds, amount=amount, activities=acts}
   where
-    name   = ns
-    date   = ds
-    value  = (read vs)::Double
+    amount = (readNote "amount" vs)::Double
     acts   = activitiesFromList as
-fromList _ = []
+fromList _ = error "could not parse daytum record"
 
 activitiesFromList :: String -> [Activity]
 activitiesFromList xs = afl xs []
@@ -37,3 +39,5 @@ activitiesFromList xs = afl xs []
       ' ':xs -> afl xs w
       ';':xs -> w:(afl xs [])
       x:xs   -> afl xs (w++[x])
+
+
