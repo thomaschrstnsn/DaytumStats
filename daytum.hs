@@ -18,7 +18,7 @@ data DaytumRecord = Daytum { name       :: String
                            , date       :: DateTime
                            , amount     :: Double
                            , activities :: [Activity]
-                           } deriving Show
+                           } deriving (Eq, Show)
 
 -- | Parses a csv file as a list of daytum records
 daytumsFromCsvFile :: String -> IO [DaytumRecord]
@@ -41,7 +41,7 @@ daytumFromCsvLine _ = error "could not parse daytum record"
 daytumDateParse :: String -> DateTime
 daytumDateParse x = case pd x of Just x -> x
                                  otherwise -> error $ "failed to parse string " ++ x ++ " as datetime"
-  where pd = parseDateTime $ "%a %b %e %H:%M:%S %Z %Y" -- should be: dateTimeFmt from defaultTimeLocale
+  where pd = parseDateTime $ dateTimeFmt defaultTimeLocale
 
 activitiesFromList :: String -> [Activity]
 activitiesFromList xs = afl xs []
