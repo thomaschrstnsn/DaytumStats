@@ -1,8 +1,11 @@
 {-# LANGUAGE ScopedTypeVariables #-}
 module Daytum
   (
-    DaytumRecord(..),
     Activity,
+    DaytumRecord(..),
+    DaytumField,
+    uniqueFields,
+    filterByField,
     daytumsFromCsvFile,
     daytumFromCsvLine
   )
@@ -12,6 +15,7 @@ import Data.DateTime
 import System.Locale
 import Safe
 import CSV (parseCSV)
+import qualified Data.List as DL
 
 type Activity = String
 data DaytumRecord = Daytum { name       :: String
@@ -19,6 +23,15 @@ data DaytumRecord = Daytum { name       :: String
                            , amount     :: Double
                            , activities :: [Activity]
                            } deriving (Eq, Show)
+
+type DaytumField a = DaytumRecord -> a
+
+uniqueFields :: Eq a =>  DaytumField a -> [DaytumRecord] -> [a]
+uniqueFields f xs = DL.nub $ map f xs
+
+filterByField :: Eq a =>  DaytumField a -> a -> [DaytumRecord] -> [DaytumRecord]
+filterByField f value xs = filter decider xs
+  where decider record = value == f record
 
 -- | Parses a csv file as a list of daytum records
 daytumsFromCsvFile :: String -> IO [DaytumRecord]
