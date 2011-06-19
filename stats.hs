@@ -11,34 +11,62 @@ import Prelude hiding (minimum, maximum)
 import Daytum
 import qualified Data.List as DL
 import Data.DateTime
+import Data.Time.Clock
 
-data DaytumFieldStats a = DaytumFieldStats { minimum :: a,
-                                   maximum :: a,
-                                   count   :: Int
-                                 } deriving Show
+data DaytumFieldStats a =
+  DaytumFieldStats
+    { minimum :: a,
+      maximum :: a,
+      count   :: Int
+    } deriving Show
 
 fieldStats :: Ord a =>  DaytumField a -> [DaytumRecord] -> DaytumFieldStats a
-fieldStats f xs = DaytumFieldStats { minimum = DL.minimum xs', maximum = DL.maximum xs', count = length xs' }
-  where
-    xs' = map f xs
+fieldStats f xs = let xs' = map f xs in
+                  DaytumFieldStats { minimum = DL.minimum xs',
+                                     maximum = DL.maximum xs',
+                                     count   = length xs' }
 
-data DaytumAmountStats a = DaytumAmountStats { least   :: a,
-                                               most    :: a,
-                                               average :: a
-                                             } deriving Show
+data DaytumAmountStats a =
+  DaytumAmountStats
+    { least   :: a,
+      most    :: a,
+      average :: a
+    } deriving Show
 
 amountStats :: [DaytumRecord] -> DaytumAmountStats Double
 amountStats xs = DaytumAmountStats { least = minimum stats, most = maximum stats, average = avg }
   where
     stats = fieldStats amount xs
     xs' = map amount xs
-    avg = sum xs' / fromIntegral (length xs)
+    avg = DL.sum xs' / fromIntegral (length xs)
 
-data DaytumDateStats = DaytumDateStats { first :: DateTime,
-                                         last  :: DateTime,
-                                         averageDaysBetween :: Double
-                                       } deriving Show
+data DaytumDateStats =
+  DaytumDateStats
+    { first              :: DateTime,
+      last               :: DateTime,
+      averageDaysBetween :: Double,
+      altAvg             :: Double
+    } deriving Show
 
 dateStats :: [DaytumRecord] -> DaytumDateStats
-dateStats xs = DaytumDateStats { first = minimum stats, last = maximum stats, averageDaysBetween = 0.0 }
-  where stats = fieldStats date xs
+dateStats xs = DaytumDateStats { first = minimum stats, last = maximum stats, averageDaysBetween = avg, altAvg = altAvg }
+  where
+    stats = fieldStats date xs
+    xs'   = map date xs
+    deltadays = map toDays $ dateDiffs xs'
+    avg   = DL.sum deltadays / fromIntegral (length xs)
+    min   = DL.minimum xs'
+    max   = DL.maximum xs'
+    altDif = diffUTCTime max min
+    altAvg = toDays altDif / fromIntegral (length xs)
+
+dateDiffs :: [DateTime] -> [NominalDiffTime]
+dateDiffs ds = map dd $ zip ds' $ tail ds'
+  where 
+    ds' = DL.sort ds
+    dd (x,y) = diffUTCTime y x
+
+toDays :: Fractional a =>  NominalDiffTime -> a
+toDays d = realToFrac d / secondsPerDay
+  where
+    secondsPerDay = 24 * 60 * 60
