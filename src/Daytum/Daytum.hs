@@ -14,7 +14,7 @@ where
 import Data.DateTime
 import System.Locale
 import Safe
-import CSV (parseCSV)
+import Data.CSV (parseCSV)
 import qualified Data.List as DL
 
 type Activity = String

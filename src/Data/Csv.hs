@@ -1,4 +1,4 @@
-module CSV (parseCSV)
+module Data.CSV (parseCSV)
 where
 
 import Text.ParserCombinators.Parsec

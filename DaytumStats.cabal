@@ -1,0 +1,28 @@
+Name: DaytumStats
+Version: 0.0
+Synopsis: Toy Haskell project for parsing and performing statistics on Daytum CSV-dumps.
+
+License: BSD3
+License-file: LICENSE
+
+Author: Thomas Christensen
+Maintainer: thomas@chrstnsn.dk
+Copyright: (c) 2011 Thomas Christensen
+
+Stability: experimental
+Build-type: Simple
+
+Cabal-version: >=1.2
+
+Executable DaytumStats
+  hs-source-dirs: src, src/Daytum
+  Other-modules: Daytum, Daytum.Stats, Data.CSV
+  Main-is: main.hs
+  Build-depends:
+    base >= 3 && < 5,
+    parsec,
+    time,
+    datetime,
+    safe,
+    old-locale
+
