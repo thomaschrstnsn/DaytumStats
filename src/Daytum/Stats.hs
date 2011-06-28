@@ -10,6 +10,7 @@ where
 import Prelude hiding (minimum, maximum)
 import Daytum
 import qualified Data.List as DL
+import qualified Data.List.Statistics as DLS
 import Data.DateTime
 import Data.Time.Clock
 
@@ -25,14 +26,16 @@ orderedStats xs = OrderedStats { minimum = DL.minimum xs, maximum = DL.maximum x
 data NumStats a =
   NumStats
     { order   :: OrderedStats a,
-      average :: a
+      average :: a,
+      median  :: a
     } deriving Show
 
 numStats :: (Fractional a, Ord a) =>  [a] -> NumStats a
-numStats xs = NumStats { order = oStats, average = average }
+numStats xs = NumStats { order = oStats, average = average, median = median }
   where
     oStats  = orderedStats xs
-    average = DL.sum xs / fromIntegral (length xs)
+    average = DLS.average xs
+    median  = DLS.median xs
 
 amountStats :: [DaytumRecord] -> NumStats Double
 amountStats xs = numStats $ fieldExtract amount xs
