@@ -12,7 +12,7 @@ main = do
   putStrLn $ show $ uniqueFields name records
   putStrLn $ "showing entries with name: Spinning"
   let spinning = filterByField name "Spinning" records
-  putStrLn $ show $ orderedStats $ fieldExtract date spinning
+  putStrLn $ show $ dateStats spinning
 
   let actRunning = "Running"
   let actRunningNoAct = "Running (No Activity)"
