@@ -1,9 +1,9 @@
 {-# LANGUAGE DisambiguateRecordFields #-}
 module Daytum.Stats
   (
-    DaytumFieldStats, fieldStats,
-    DaytumAmountStats, amountStats,
-    DaytumDateStats, dateStats
+    OrderedStats, orderedStats,
+    AmountStats, amountStats,
+    DateStats, dateStats
   )
 where
 
@@ -13,41 +13,41 @@ import qualified Data.List as DL
 import Data.DateTime
 import Data.Time.Clock
 
-data DaytumFieldStats a =
-  DaytumFieldStats
+data OrderedStats a =
+  OrderedStats
     { minimum :: a,
       maximum :: a
     } deriving Show
 
-fieldStats :: Ord a =>  DaytumField a -> [DaytumRecord] -> DaytumFieldStats a
-fieldStats f xs = let xs' = map f xs in
-                  DaytumFieldStats { minimum = DL.minimum xs', maximum = DL.maximum xs' }
+orderedStats :: Ord a =>  DaytumField a -> [DaytumRecord] -> OrderedStats a
+orderedStats f xs = let xs' = map f xs in
+                  OrderedStats { minimum = DL.minimum xs', maximum = DL.maximum xs' }
 
-data DaytumAmountStats a =
-  DaytumAmountStats
+data AmountStats a =
+  AmountStats
     { least   :: a,
       most    :: a,
       average :: a
     } deriving Show
 
-amountStats :: [DaytumRecord] -> DaytumAmountStats Double
-amountStats xs = DaytumAmountStats { least = minimum stats, most = maximum stats, average = avg }
+amountStats :: [DaytumRecord] -> AmountStats Double
+amountStats xs = AmountStats { least = minimum stats, most = maximum stats, average = avg }
   where
-    stats = fieldStats amount xs
+    stats = orderedStats amount xs
     xs' = map amount xs
     avg = DL.sum xs' / fromIntegral (length xs)
 
-data DaytumDateStats =
-  DaytumDateStats
+data DateStats =
+  DateStats
     { first              :: DateTime,
       last               :: DateTime,
       averageDaysBetween :: Double
     } deriving Show
 
-dateStats :: [DaytumRecord] -> DaytumDateStats
-dateStats xs = DaytumDateStats { first = minimum stats, last = maximum stats, averageDaysBetween = avg }
+dateStats :: [DaytumRecord] -> DateStats
+dateStats xs = DateStats { first = minimum stats, last = maximum stats, averageDaysBetween = avg }
   where
-    stats = fieldStats date xs
+    stats = orderedStats date xs
     xs'   = map date xs
     deltadays = map toDays $ dateDiffs xs'
     avg   = DL.sum deltadays / fromIntegral (length xs)
