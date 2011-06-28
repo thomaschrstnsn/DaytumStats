@@ -2,7 +2,7 @@
 module Daytum.Stats
   (
     OrderedStats, orderedStats,
-    AmountStats, amountStats,
+    NumStats, amountStats,
     DateStats, dateStats
   )
 where
@@ -19,40 +19,37 @@ data OrderedStats a =
       maximum :: a
     } deriving Show
 
-orderedStats :: Ord a =>  DaytumField a -> [DaytumRecord] -> OrderedStats a
-orderedStats f xs = let xs' = map f xs in
-                  OrderedStats { minimum = DL.minimum xs', maximum = DL.maximum xs' }
+orderedStats :: Ord a =>  [a] -> OrderedStats a
+orderedStats xs = OrderedStats { minimum = DL.minimum xs, maximum = DL.maximum xs }
 
-data AmountStats a =
-  AmountStats
-    { least   :: a,
-      most    :: a,
+data NumStats a =
+  NumStats
+    { order   :: OrderedStats a,
       average :: a
     } deriving Show
 
-amountStats :: [DaytumRecord] -> AmountStats Double
-amountStats xs = AmountStats { least = minimum stats, most = maximum stats, average = avg }
+numStats :: (Fractional a, Ord a) =>  [a] -> NumStats a
+numStats xs = NumStats { order = oStats, average = average }
   where
-    stats = orderedStats amount xs
-    xs' = map amount xs
-    avg = DL.sum xs' / fromIntegral (length xs)
+    oStats  = orderedStats xs
+    average = DL.sum xs / fromIntegral (length xs)
+
+amountStats :: [DaytumRecord] -> NumStats Double
+amountStats xs = numStats $ fieldExtract amount xs
 
 data DateStats =
   DateStats
-    { first              :: DateTime,
-      last               :: DateTime,
-      averageDaysBetween :: Double
+    { orderDays   :: OrderedStats DateTime,
+      daysBetween :: NumStats Double
     } deriving Show
 
 dateStats :: [DaytumRecord] -> DateStats
-dateStats xs = DateStats { first = minimum stats, last = maximum stats, averageDaysBetween = avg }
+dateStats xs = DateStats { orderDays = oStats, daysBetween = dStats }
   where
-    stats = orderedStats date xs
-    xs'   = map date xs
-    deltadays = map toDays $ dateDiffs xs'
-    avg   = DL.sum deltadays / fromIntegral (length xs)
-    min   = DL.minimum xs'
-    max   = DL.maximum xs'
+    xs'    = fieldExtract date xs
+    oStats = orderedStats xs'
+    deltadays  = map toDays $ dateDiffs xs'
+    dStats = numStats deltadays
 
 dateDiffs :: [DateTime] -> [NominalDiffTime]
 dateDiffs ds = map dd $ zip ds' $ tail ds'

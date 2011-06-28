@@ -4,6 +4,7 @@ module Daytum
     Activity,
     DaytumRecord(..),
     DaytumField,
+    fieldExtract,
     uniqueFields,
     filterByField,
     daytumsFromCsvFile,
@@ -25,6 +26,9 @@ data DaytumRecord = Daytum { name       :: String
                            } deriving (Eq, Show)
 
 type DaytumField a = DaytumRecord -> a
+
+fieldExtract :: DaytumField a -> [DaytumRecord] -> [a]
+fieldExtract f xs = map f xs
 
 uniqueFields :: Eq a =>  DaytumField a -> [DaytumRecord] -> [a]
 uniqueFields f xs = DL.nub $ map f xs
