@@ -25,19 +25,19 @@ orderedStats xs = OrderedStats { minimum = DL.minimum xs, maximum = DL.maximum x
 
 data NumStats a =
   NumStats
-    { order   :: OrderedStats a,
-      average :: a,
-      median  :: a,
-      range   :: a
+    { order  :: OrderedStats a,
+      mean   :: a,
+      median :: a,
+      range  :: a
     } deriving Show
 
 numStats :: (Fractional a, Ord a) =>  [a] -> NumStats a
-numStats xs = NumStats { order = oStats, average = average, median = median, range = range }
+numStats xs = NumStats { order = oStats, mean = mean, median = median, range = range }
   where
-    oStats  = orderedStats xs
-    average = DLS.average xs
-    median  = DLS.median xs
-    range   = maximum oStats - minimum oStats
+    oStats = orderedStats xs
+    mean   = DLS.mean xs
+    median = DLS.median xs
+    range  = maximum oStats - minimum oStats
 
 amountStats :: [DaytumRecord] -> NumStats Double
 amountStats xs = numStats $ fieldExtract amount xs

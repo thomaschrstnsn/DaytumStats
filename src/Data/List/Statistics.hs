@@ -1,13 +1,13 @@
 module Data.List.Statistics
   (
-    average, median
+    mean, median
   )
 where
 
 import qualified Data.List as DL
 
-average :: Fractional a =>  [a] -> a
-average xs = DL.sum xs / fromIntegral (length xs)
+mean :: Fractional a =>  [a] -> a
+mean xs = DL.sum xs / fromIntegral (length xs)
 
 median :: (Fractional a, Ord a) =>  [a] -> a
 median xs = if even len
@@ -21,4 +21,4 @@ median xs = if even len
     middleElem = head $ drop halfLen xs'
 
     twoMiddle  = take 2 $ drop (halfLen - 1) xs'
-    avgMiddle  = average twoMiddle
+    avgMiddle  = mean twoMiddle
