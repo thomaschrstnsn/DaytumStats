@@ -1,6 +1,6 @@
 module Data.List.Statistics
   (
-    mean, median
+    mean, median, standardDeviation
   )
 where
 
@@ -22,3 +22,9 @@ median xs = if even len
 
     twoMiddle  = take 2 $ drop (halfLen - 1) xs'
     avgMiddle  = mean twoMiddle
+
+standardDeviation :: Floating a => [a] -> a
+standardDeviation xs = sqrt $ mean squareDiffs
+  where
+    meanValue   = mean xs
+    squareDiffs = map (\x -> x*x) $ map (meanValue -) xs

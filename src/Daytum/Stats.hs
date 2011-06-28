@@ -28,15 +28,17 @@ data NumStats a =
     { order  :: OrderedStats a,
       mean   :: a,
       median :: a,
+      stdDev :: a,
       range  :: a
     } deriving Show
 
-numStats :: (Fractional a, Ord a) =>  [a] -> NumStats a
-numStats xs = NumStats { order = oStats, mean = mean, median = median, range = range }
+numStats :: (Floating a, Ord a) =>  [a] -> NumStats a
+numStats xs = NumStats { order = oStats, mean = mean, median = median, stdDev = stdDev, range = range }
   where
     oStats = orderedStats xs
     mean   = DLS.mean xs
     median = DLS.median xs
+    stdDev = DLS.standardDeviation xs
     range  = maximum oStats - minimum oStats
 
 amountStats :: [DaytumRecord] -> NumStats Double
