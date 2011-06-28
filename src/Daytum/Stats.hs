@@ -16,15 +16,12 @@ import Data.Time.Clock
 data DaytumFieldStats a =
   DaytumFieldStats
     { minimum :: a,
-      maximum :: a,
-      count   :: Int
+      maximum :: a
     } deriving Show
 
 fieldStats :: Ord a =>  DaytumField a -> [DaytumRecord] -> DaytumFieldStats a
 fieldStats f xs = let xs' = map f xs in
-                  DaytumFieldStats { minimum = DL.minimum xs',
-                                     maximum = DL.maximum xs',
-                                     count   = length xs' }
+                  DaytumFieldStats { minimum = DL.minimum xs', maximum = DL.maximum xs' }
 
 data DaytumAmountStats a =
   DaytumAmountStats
@@ -44,12 +41,11 @@ data DaytumDateStats =
   DaytumDateStats
     { first              :: DateTime,
       last               :: DateTime,
-      averageDaysBetween :: Double,
-      altAvg             :: Double
+      averageDaysBetween :: Double
     } deriving Show
 
 dateStats :: [DaytumRecord] -> DaytumDateStats
-dateStats xs = DaytumDateStats { first = minimum stats, last = maximum stats, averageDaysBetween = avg, altAvg = altAvg }
+dateStats xs = DaytumDateStats { first = minimum stats, last = maximum stats, averageDaysBetween = avg }
   where
     stats = fieldStats date xs
     xs'   = map date xs
@@ -57,12 +53,10 @@ dateStats xs = DaytumDateStats { first = minimum stats, last = maximum stats, av
     avg   = DL.sum deltadays / fromIntegral (length xs)
     min   = DL.minimum xs'
     max   = DL.maximum xs'
-    altDif = diffUTCTime max min
-    altAvg = toDays altDif / fromIntegral (length xs)
 
 dateDiffs :: [DateTime] -> [NominalDiffTime]
 dateDiffs ds = map dd $ zip ds' $ tail ds'
-  where 
+  where
     ds' = DL.sort ds
     dd (x,y) = diffUTCTime y x
 
