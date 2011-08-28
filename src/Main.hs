@@ -4,6 +4,7 @@ where
 import System.Environment (getArgs)
 import Daytum
 import Daytum.Stats
+import Daytum.Filter
 
 main = do
   ~[fname] <- getArgs
@@ -11,13 +12,13 @@ main = do
   records <- daytumsFromCsvFile fname
   putStrLn $ show $ uniqueFields name records
   putStrLn $ "showing entries with name: Spinning"
-  let spinning = filterByField name "Spinning" records
+  let spinning = filterFieldByEq name "Spinning" records
   putStrLn $ show $ dateStats spinning
 
   let actRunning = "Running"
   let actRunningNoAct = "Running (No Activity)"
-  let pureRunning = filterByField name actRunning records
-  let nonPureRunning = filterByField name actRunningNoAct records
+  let pureRunning = filterFieldByEq name actRunning records
+  let nonPureRunning = filterFieldByEq name actRunningNoAct records
   let running = pureRunning ++ nonPureRunning
   putStrLn $ "showing entries with name: Running and friends"
   putStrLn $ show $ amountStats running

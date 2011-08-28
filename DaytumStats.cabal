@@ -16,7 +16,7 @@ Cabal-version: >=1.2
 
 Executable DaytumStats
   hs-source-dirs: src, src/Daytum
-  Other-modules: Daytum, Daytum.Stats, Data.CSV, Data.List.Statistics
+  Other-modules: Daytum, Daytum.Stats, Daytum.Filter, Data.CSV, Data.List.Statistics
   Main-is: Main.hs
   Build-depends:
     base >= 3 && < 5,
@@ -28,7 +28,7 @@ Executable DaytumStats
 
 Executable OecoStats
   hs-source-dirs: src, src/Daytum
-  Other-modules: Daytum, Daytum.Stats, Data.CSV, Data.List.Statistics
+  Other-modules: Daytum, Daytum.Stats, Daytum.Filter, Data.CSV, Data.List.Statistics
   Main-is: OecoMain.hs
   Build-depends:
     base >= 3 && < 5,

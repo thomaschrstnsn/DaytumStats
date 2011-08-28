@@ -7,7 +7,6 @@ module Daytum
     fieldExtract,
     uniqueFields,
     uniqueCategories,
-    filterByField,
     daytumsFromCsvFile,
     daytumFromCsvLine
   )
@@ -36,10 +35,6 @@ uniqueFields f xs = DL.nub $ map f xs
 
 uniqueCategories :: [DaytumRecord] -> [Category]
 uniqueCategories xs = DL.nub $ concat $ uniqueFields categories xs
-
-filterByField :: Eq a =>  DaytumField a -> a -> [DaytumRecord] -> [DaytumRecord]
-filterByField f value xs = filter decider xs
-  where decider record = value == f record
 
 -- | Parses a csv file as a list of daytum records
 daytumsFromCsvFile :: String -> IO [DaytumRecord]
