@@ -9,4 +9,4 @@ main = do
   ~[fname] <- getArgs
   putStrLn $ "parsing: " ++ show fname
   records <- daytumsFromCsvFile fname
-  putStrLn $ show $ uniqueFields name records
+  putStrLn $ show $ uniqueCategories records
