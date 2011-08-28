@@ -1,9 +1,3 @@
-*.hi
-*.o
-daytum
-
-
 .DS_Store
-
-main
 dist
+faelles.csv
